@@ -1,0 +1,21 @@
+package com.glarimy.hbm;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue(value = "2")
+public class Employee extends Person {
+	private static final long serialVersionUID = 8028369986900677881L;
+	private double salary;
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary
+				+ "]";
+	}
+}

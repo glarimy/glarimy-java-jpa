@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping
+   PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.glarimy.hbm">
+	<class name="Person" table="People">
+		<id name="id" type="int">
+			<generator class="native" />
+		</id>
+		<property name="name" type="string" unique="true" />
+		<property name="dob" type="date" column="Date_Of_Birth" />
+		<property name="height" type="double" precision="2" scale="2" />
+		<property name="indian" type="boolean" />
+		<property name="phone" type="int" length="12" not-null="false" />
+	</class>
+</hibernate-mapping>
